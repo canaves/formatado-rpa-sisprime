@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formatador RPA Sisprime</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+      <h1>Formatador RPA Sisprime</h1>
+  </div>
+  <div class="menu">
+      <a href="#" onclick="showSection('envelopes')">Formatador de ID Envelopes</a>
+      <a href="#" onclick="showSection('numeros')">Formatador de Números SQL</a>
+      <a href="#" onclick="showSection('comparador')">Comparador de IDs</a>
+  </div>
+  <div id="envelopes" class="container hidden">
+      <h2>Formatação ID Envelopes RPA</h2>
+      <p>Cole os ID's abaixo e clique no botão para formatá-las:</p>
+      <textarea id="keysInput" placeholder="Cole os ID's aqui"></textarea>
+      <div>
+          <button class="format" onclick="formatKeys()">Formatar Chaves</button>
+          <button class="clear" onclick="clearInput()">Limpar</button>
+      </div>
+      <div class="output-container">
+          <p>ID's Formatados:</p>
+          <textarea id="formattedKeys" readonly></textarea>
+          <br><br>
+          <button class="format" onclick="copyToClipboard('formattedKeys')">Copiar</button>
+      </div>
+  </div>
+  <div id="numeros" class="container hidden">
+      <h2>Formatador de Números para Consulta SQL</h2>
+      <p>Cole os números abaixo e clique no botão para formatá-los:</p>
+      <textarea id="numbersInput" placeholder="Cole os números aqui"></textarea>
+      <div>
+          <button class="format" onclick="formatNumbers()">Formatar Números</button>
+          <button class="clear" onclick="clearInput()">Limpar</button>
+      </div>
+      <div class="output-container">
+          <p>Números Formatados:</p>
+          <textarea id="formattedNumbers" readonly></textarea>
+          <br><br>
+          <button class="format" onclick="copyToClipboard('formattedNumbers')">Copiar</button>
+      </div>
+  </div>
+  <div id="comparador" class="container hidden">
+      <h2>Comparador de IDs</h2>
+      <div class="row">
+          <div class="column">
+              <h2>IDs a Processar</h2>
+              <textarea id="idsToProcess" placeholder="Cole os IDs a processar aqui..."></textarea>
+              <div class="counter" id="countToProcess">Total de IDs: 0</div>
+              <button class="clear" onclick="clearTextarea('idsToProcess')">Limpar IDs a Processar</button>
+          </div>
+          <div class="column">
+              <h2>IDs Já Processados</h2>
+              <textarea id="idsProcessed" placeholder="Cole os IDs já processados aqui..."></textarea>
+              <button class="clear" onclick="clearTextarea('idsProcessed')">Limpar IDs Já Processados</button>
+          </div>
+      </div>
+      <button class="compare" onclick="compareIDs()">Comparar IDs</button>
+      <div class="row">
+          <div class="column">
+              <div class="result-box">
+                  <h2>IDs Iguais</h2>
+                  <textarea id="commonIDs" readonly></textarea>
+                  <button class="copy" onclick="copyToClipboard('commonIDs')">Copiar IDs Iguais</button>
+              </div>
+          </div>
+          <div class="column">
+              <div class="result-box">
+                  <h2>IDs Diferentes</h2>
+                  <textarea id="differentIDs" readonly></textarea>
+                  <button class="copy" onclick="copyToClipboard('differentIDs')">Copiar IDs Diferentes</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

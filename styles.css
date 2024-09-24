@@ -1,0 +1,115 @@
+  body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #eef2f3;
+          color: #333;
+      }
+      .header {
+          background-color: #007bff;
+          color: white;
+          padding: 20px;
+          text-align: center;
+          border-bottom: 4px solid #0056b3;
+      }
+      .menu {
+          display: flex;
+          justify-content: center;
+          background-color: #343a40;
+      }
+      .menu a {
+          padding: 14px 20px;
+          color: white;
+          text-align: center;
+          text-decoration: none;
+		}
+	    .menu a:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 22);
+	}
+		.menu a.active {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: #0056b3; /* Cor de fundo do botão ativo */
+        color: #007bff; 
+	}
+      .container {
+          max-width: 900px;
+          margin: 40px auto;
+          padding: 20px;
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+          color: #007bff;
+          font-family: 'Arial Black', Arial, sans-serif;
+          margin-bottom: 10px;
+      }
+      textarea {
+          width: 95%;
+          height: 150px;
+          resize: none;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 10px;
+          font-size: 14px;
+          margin-bottom: 10px;
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-right: 10px;
+          font-size: 16px;
+          color: white;
+          transition: background-color 0.3s, box-shadow 0.3s;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      button.format {
+          background-color: #007bff;
+      }
+      button.clear {
+          background-color: #6c757d;
+          color: white;
+      }
+      button.compare, button.copy {
+          background-color: #007bff;
+      }
+      button:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          background-color: #0056b3; /* Cor mais escura para o botão format */
+      }
+      button.clear:hover {
+          background-color: #5a6268; /* Cor mais escura para o botão clear */
+      }
+      .output-container {
+          margin-top: 20px;
+      }
+      .hidden {
+          display: none;
+      }
+      .row {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+      }
+      .column {
+          width: 48%;
+      }
+      .result-box {
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          padding: 20px;
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+      }
+      .result-box h2 {
+          color: #007bff;
+          font-family: 'Arial Black', Arial, sans-serif;
+          margin-top: 0;
+      }
+      .counter {
+          margin: 5px 0;
+          font-size: 14px;
+      }
